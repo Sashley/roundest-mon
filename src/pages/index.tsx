@@ -21,7 +21,8 @@ export default function Home() {
     refetchOnWindowFocus: false,
   });
 
-  const voteMutation = trpc.useMutation(["cast-vote"]);
+  // const voteMutation = trpc.useMutation(["cast-vote"]);
+  const voteMutation = trpc.useMutation("cast-vote");
   const plausible = usePlausible();
 
   const voteForRoundest = (selected: number) => {
@@ -48,13 +49,13 @@ export default function Home() {
   const fetchingNext = voteMutation.isLoading || isLoading;
 
   return (
-    <div className="h-screen w-screen flex flex-col justify-between items-center relative">
+    <div className="h-screen w-screen flex flex-col items-center relative">
       <Head>
         <title>Roundest Pokemon</title>
       </Head>
       <div className="text-2xl text-center pt-8">Which Pokémon is Rounder?</div>
       {pokemonPair && (
-        <div className="p-8 flex justify-between items-center max-w-2xl flex-col md:flex-row animate-fade-in">
+        <div className="p-8 flex items-center max-w-2xl flex-col md:flex-row animate-fade-in">
           <PokemonListing
             pokemon={pokemonPair.firstPokemon}
             vote={() => voteForRoundest(pokemonPair.firstPokemon.id)}
