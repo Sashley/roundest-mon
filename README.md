@@ -29,3 +29,10 @@ Setup
 - [x] Persist data fetched from PokemonAPI
 - [x] Create the results page with counting/sorting
 - [x] Better loading state between votes
+
+
+## PLANETSCALE 
+ - delete existing db, currently with PlanetScale
+ - create new
+ - get connection strings, from PlanetScale (with Prisma)
+ - paste to .env

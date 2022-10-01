@@ -48,7 +48,7 @@ export default function Home() {
   const fetchingNext = voteMutation.isLoading || isLoading;
 
   return (
-    <div className="h-screen w-screen flex flex-col justify-between items-center relative">
+    <div className="h-screen w-screen flex flex-col items-center relative">
       <Head>
         <title>Roundest Pokemon</title>
       </Head>
